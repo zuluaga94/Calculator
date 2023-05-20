@@ -28,28 +28,28 @@
             </Grid.ColumnDefinitions>
 
 
+            <Button Grid.Row="3" Grid.Column="0" Text="0" Command="{Binding NumberCommand}" CommandParameter="0" Margin="5" />
+            <Button Grid.Row="3" Grid.Column="1" Text="C" Command="{Binding ClearCommand}" CommandParameter="C" Margin="5" />
+            <Button Grid.Row="3" Grid.Column="2" Text="=" Command="{Binding EqualCommand}" Margin="5" />
+            <Button Grid.Row="3" Grid.Column="3" Text="/" Command="{Binding OperatorCommand}" CommandParameter="/" Margin="5" />
             
-            <Button Grid.Row="0" Grid.Column="0" Text="C" Command="{Binding ClearCommand}" CommandParameter="C" Margin="5" />
-            <Button Grid.Row="0" Grid.Column="1" Text="0" Command="{Binding NumberCommand}" CommandParameter="0" Margin="5" />
-            <Button Grid.Row="0" Grid.Column="2" Text="=" Command="{Binding EqualCommand}" Margin="5" />
-            <Button Grid.Row="0" Grid.Column="3" Text="/" Command="{Binding OperatorCommand}" CommandParameter="/" Margin="5" />
-            
-            <Button Grid.Row="1" Grid.Column="0" Text="1" Command="{Binding NumberCommand}" CommandParameter="1" Margin="5" />
-            <Button Grid.Row="1" Grid.Column="1" Text="2" Command="{Binding NumberCommand}" CommandParameter="2" Margin="5" />
-            <Button Grid.Row="1" Grid.Column="2" Text="3" Command="{Binding NumberCommand}" CommandParameter="3" Margin="5" />
-            <Button Grid.Row="1" Grid.Column="3" Text="+" Command="{Binding OperatorCommand}" CommandParameter="+" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="0" Text="1" Command="{Binding NumberCommand}" CommandParameter="1" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="1" Text="2" Command="{Binding NumberCommand}" CommandParameter="2" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="2" Text="3" Command="{Binding NumberCommand}" CommandParameter="3" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="3" Text="+" Command="{Binding OperatorCommand}" CommandParameter="+" Margin="5" />
 
-            <Button Grid.Row="2" Grid.Column="0" Text="4" Command="{Binding NumberCommand}" CommandParameter="4" Margin="5" />
-            <Button Grid.Row="2" Grid.Column="1" Text="5" Command="{Binding NumberCommand}" CommandParameter="5" Margin="5" />
-            <Button Grid.Row="2" Grid.Column="2" Text="6" Command="{Binding NumberCommand}" CommandParameter="6" Margin="5" />
-            <Button Grid.Row="2" Grid.Column="3" Text="-" Command="{Binding OperatorCommand}" CommandParameter="-" Margin="5" />
+            <Button Grid.Row="1" Grid.Column="0" Text="4" Command="{Binding NumberCommand}" CommandParameter="4" Margin="5" />
+            <Button Grid.Row="1" Grid.Column="1" Text="5" Command="{Binding NumberCommand}" CommandParameter="5" Margin="5" />
+            <Button Grid.Row="1" Grid.Column="2" Text="6" Command="{Binding NumberCommand}" CommandParameter="6" Margin="5" />
+            <Button Grid.Row="1" Grid.Column="3" Text="-" Command="{Binding OperatorCommand}" CommandParameter="-" Margin="5" />
 
-            <Button Grid.Row="3" Grid.Column="0" Text="7" Command="{Binding NumberCommand}" CommandParameter="7" Margin="5" />
-            <Button Grid.Row="3" Grid.Column="1" Text="8" Command="{Binding NumberCommand}" CommandParameter="8" Margin="5" />
-            <Button Grid.Row="3" Grid.Column="2" Text="9" Command="{Binding NumberCommand}" CommandParameter="9" Margin="5" />
-            <Button Grid.Row="3" Grid.Column="3" Text="*" Command="{Binding OperatorCommand}" CommandParameter="*" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="0" Text="7" Command="{Binding NumberCommand}" CommandParameter="7" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="1" Text="8" Command="{Binding NumberCommand}" CommandParameter="8" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="2" Text="9" Command="{Binding NumberCommand}" CommandParameter="9" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="3" Text="*" Command="{Binding OperatorCommand}" CommandParameter="*" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="2" Text="9" Command="{Binding NumberCommand}" CommandParameter="9" Margin="5" />
+            <Button Grid.Row="0" Grid.Column="3" Text="*" Command="{Binding OperatorCommand}" CommandParameter="*" Margin="5" />
 
-            
         </Grid>
     </StackLayout>
 </ContentPage>

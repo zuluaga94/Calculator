@@ -25,6 +25,9 @@ namespace Calculator.MVVM.ViewModels
         public ICommand OperatorCommand { get; }
         public ICommand ClearCommand { get; }
         public ICommand EqualCommand { get; }
+        public ICommand BackspaceCommand { get; }
+        public ICommand PercentageCommand { get; }
+        public ICommand NegateCommand { get; }
 
         public CalculatorViewModel()
         {
@@ -33,6 +36,9 @@ namespace Calculator.MVVM.ViewModels
             OperatorCommand = new Command<string>(SetOperator);
             ClearCommand = new Command(Clear);
             EqualCommand = new Command(PerformCalculation);
+            BackspaceCommand = new Command(Backspace);
+            PercentageCommand = new Command(CalculatePercentage);
+            NegateCommand = new Command(NegateNumber);
         }
 
         private void AppendNumber(string number)
@@ -60,8 +66,39 @@ namespace Calculator.MVVM.ViewModels
             if (!string.IsNullOrEmpty(DisplayText))
             {
                 var dataTable = new DataTable();
-                var result = dataTable.Compute(DisplayText, "");
+                 var result = dataTable.Compute(DisplayText, "");
                 DisplayText = result.ToString();
+            }
+        }
+
+        private void Backspace()
+        {
+            if (!string.IsNullOrEmpty(DisplayText))
+            {
+                DisplayText = DisplayText.Substring(0, DisplayText.Length - 1);
+            }
+        }
+
+        private void CalculatePercentage()
+        {
+            if (!string.IsNullOrEmpty(DisplayText))
+            {
+                var dataTable = new DataTable();
+                var expression = $"{DisplayText}/100";
+                var result = dataTable.Compute(expression, "");
+                DisplayText = result.ToString();
+            }
+        }
+
+        private void NegateNumber()
+        {
+            if (!string.IsNullOrEmpty(DisplayText))
+            {
+                if (double.TryParse(DisplayText, out double number))
+                {
+                    number *= -1;
+                    DisplayText = number.ToString();
+                }
             }
         }
 
